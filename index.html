@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>$QUEEF DAO — Puff With Purpose</title>
+  <meta name="description" content="$QUEEF DAO — community proposals, treasury transparency, and on-chain governance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <img src="./assets/logo-queefcoin.svg" alt="$QUEEF logo" class="logo">
+      <span class="wordmark">$QUEEF DAO</span>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#treasury">Treasury</a>
+      <a href="#proposals">Proposals</a>
+      <a href="#howto">How to Vote</a>
+      <a href="#transparency">Transparency</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="overview" class="hero">
+      <h1>Puff With Purpose 💨</h1>
+      <p>The community steers the treasury. Propose, vote, and track every on-chain move.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#proposals">View Proposals</a>
+        <a class="btn ghost" href="#treasury">See Treasury</a>
+      </div>
+    </section>
+
+    <section id="treasury" class="panel">
+      <h2>Treasury</h2>
+      <div id="treasuryGrid" class="grid"></div>
+      <div class="legend">
+        <span class="dot treasury"></span>DAO Treasury
+        <span class="dot burn"></span>Buyback/Burn
+        <span class="dot rewards"></span>Creator Rewards
+        <span class="dot dev"></span>Dev Ops
+      </div>
+      <div class="tx-feed">
+        <h3>Latest Transactions</h3>
+        <ul id="txList"><li>Loading…</li></ul>
+      </div>
+    </section>
+
+    <section id="proposals" class="panel">
+      <h2>Proposals</h2>
+      <p class="sub">Active votes & recent results. (On-chain Realm link coming soon.)</p>
+      <div id="proposalList" class="cards"></div>
+      <a class="btn primary" id="newProposalBtn" href="#">Create Proposal</a>
+    </section>
+
+    <section id="howto" class="panel">
+      <h2>How to Vote</h2>
+      <ol class="steps">
+        <li>Hold <strong>$QUEEF</strong> in your wallet.</li>
+        <li>Connect wallet on the Proposals page.</li>
+        <li>Open any active proposal and choose your vote.</li>
+        <li>After the window closes, results publish & the multisig executes.</li>
+      </ol>
+      <p class="tip">Minimum to create a proposal: <strong>69,000 $QUEEF</strong>. Voting window: <strong>72 hours</strong>.</p>
+    </section>
+
+    <section id="transparency" class="panel">
+      <h2>Transparency & Rules</h2>
+      <ul class="bullets" id="rulesList"></ul>
+      <div class="multisig">
+        <h3>Multisig</h3>
+        <p>Threshold: <strong>3 of 5</strong>. Signers published below.</p>
+        <ul id="signerList"></ul>
+      </div>
+    </section>
+
+    <section id="faq" class="panel">
+      <h2>FAQ</h2>
+      <details><summary>Is this financial advice?</summary>
+        <p>No. Governance is for community direction and transparency only.</p>
+      </details>
+      <details><summary>What if a passed vote isn’t executed?</summary>
+        <p>Multisig must publish a short justification (security/risk only) and schedule a re-vote or alternative plan.</p>
+      </details>
+      <details><summary>Do I need to stake to vote?</summary>
+        <p>Phase A: wallet balance counts. Phase B: we’ll move to SPL Governance/staking.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="sitefoot">
+    <p>© <span id="year"></span> $QUEEF DAO • Puff With Purpose</p>
+  </footer>
+
+  <script src="./config.json" type="application/json" id="dao-config"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
