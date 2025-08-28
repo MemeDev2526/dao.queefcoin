@@ -1,0 +1,75 @@
+{
+  "dao": {
+    "name": "$QUEEF DAO",
+    "tagline": "Puff With Purpose",
+    "quorum_percent": 3,
+    "pass_threshold": 50,
+    "min_tokens_to_propose": 69000,
+    "voting_window_hours": 72
+  },
+  "wallets": [
+    {
+      "label": "DAO Treasury",
+      "role": "treasury",
+      "address": "ENTER_DAO_TREASURY_ADDRESS",
+      "note": "Primary community funds"
+    },
+    {
+      "label": "Buyback / Burn",
+      "role": "burn",
+      "address": "ENTER_BURN_ADDRESS",
+      "note": "Buy/burn activity wallet"
+    },
+    {
+      "label": "Creator Rewards",
+      "role": "rewards",
+      "address": "ENTER_CREATOR_REWARDS_ADDRESS",
+      "note": "Donations, bounties, creator rewards"
+    },
+    {
+      "label": "Dev Ops",
+      "role": "dev",
+      "address": "ENTER_DEV_OPS_ADDRESS",
+      "note": "Infra, hosting, tools"
+    }
+  ],
+  "multisig": {
+    "threshold": "3 of 5",
+    "signers": [
+      {"label":"Signer 1 (Lead)", "pubkey":"ENTER_PUBKEY_1"},
+      {"label":"Signer 2", "pubkey":"ENTER_PUBKEY_2"},
+      {"label":"Signer 3", "pubkey":"ENTER_PUBKEY_3"},
+      {"label":"Signer 4", "pubkey":"ENTER_PUBKEY_4"},
+      {"label":"Signer 5", "pubkey":"ENTER_PUBKEY_5"}
+    ]
+  },
+  "rules": [
+    "Token-weighted voting using $QUEEF holdings.",
+    "Quorum: 3% of circulating supply.",
+    "Simple majority (>50%) to pass.",
+    "Voting window: 72 hours.",
+    "Multisig executes passed proposals within 7 days.",
+    "Emergency override allowed for security only; justification required."
+  ],
+  "proposals_sample": [
+    {
+      "title": "Burn 1,000,000 $QUEEF from Buyback/Burn",
+      "status": "Active",
+      "ends_in_hours": 46,
+      "link": "#",
+      "summary": "Authorize burn to reduce supply and signal conviction."
+    },
+    {
+      "title": "Fund Puff Dodge prize pool (100 SOL)",
+      "status": "Queued",
+      "ends_in_hours": 0,
+      "link": "#",
+      "summary": "Seed competitive rewards for weekly leaderboard."
+    }
+  ],
+  "tx_sample": [
+    {"ts":"2025-08-26 14:10","desc":"Received 250 SOL donation","short":"+250 SOL"},
+    {"ts":"2025-08-25 20:02","desc":"Bought $QUEEF for burn (50 SOL)","short":"BUY"},
+    {"ts":"2025-08-24 11:44","desc":"Prize payout: Puff Dodge #1 (10 SOL)","short":"PRIZE"}
+  ]
+}
