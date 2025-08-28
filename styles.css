@@ -1,0 +1,52 @@
+:root{
+  --orange:#FF6B00;         /* Primary Brand Orange */
+  --orange-hi:#FF9500;      /* Highlight Orange */
+  --coin-gold:#FDC100;
+  --black:#0D0D0D;
+  --white:#FFFFFF;
+  --gray:#AAAAAA;
+  --sol-blue:#008CFF;
+  --bg-grad-start:#2C0A44;
+  --bg-grad-end:#4D0D57;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg-grad-start),var(--bg-grad-end));color:var(--white);font-family:Rubik,system-ui,Arial}
+a{color:var(--white);text-decoration:none}
+.nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:rgba(13,13,13,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav .brand{display:flex;gap:10px;align-items:center}
+.logo{width:36px;height:36px}
+.wordmark{font-family:"Luckiest Guy", cursive;font-size:20px;letter-spacing:.5px}
+.nav nav a{margin:0 10px;opacity:.9}
+.nav nav a:hover{opacity:1}
+.hero{padding:72px 20px;text-align:center}
+.hero h1{font-family:"Luckiest Guy";font-size:48px;margin:0 0 10px}
+.hero p{color:var(--gray);max-width:720px;margin:0 auto 20px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.12)}
+.btn.primary{background:var(--orange);border-color:var(--orange);color:var(--black);font-weight:700}
+.btn.ghost{background:transparent}
+.panel{padding:40px 20px;max-width:1100px;margin:0 auto}
+.panel h2{font-family:"Luckiest Guy";font-size:34px;margin:0 0 12px}
+.sub{color:var(--gray)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.card{background:rgba(13,13,13,.55);border:1px solid rgba(255,255,255,.08);padding:16px;border-radius:12px}
+.card h3{margin:0 0 8px}
+.kv{font-family:monospace}
+.legend{display:flex;gap:16px;align-items:center;margin-top:8px;color:var(--gray)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:6px}
+.dot.treasury{background:var(--orange)}
+.dot.burn{background:var(--coin-gold)}
+.dot.rewards{background:var(--sol-blue)}
+.dot.dev{background:var(--gray)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:16px}
+.card .status{font-size:12px;color:var(--gray)}
+.steps{max-width:720px;margin:8px auto 0;line-height:1.6}
+.bullets{line-height:1.7}
+.tx-feed ul{list-style:none;padding:0;margin:8px 0}
+.tx-feed li{padding:10px;border-bottom:1px dashed rgba(255,255,255,.08)}
+.sitefoot{padding:30px 20px;text-align:center;color:var(--gray);border-top:1px solid rgba(255,255,255,.08);margin-top:40px}
+
+@media (max-width:720px){
+  .hero h1{font-size:40px}
+}
